@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animated Weather App - 5 Day Forecast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="assets/logo.svg" alt="App Logo" />
+    </div>
+
+    <!-- Hero Illustration -->
+    <div class="hero">
+      <img src="assets/hero.svg" alt="Weather Illustration" />
+    </div>
+
+    <h1>Weather App</h1>
+    <p>Type a city name and get real-time weather and 5-day forecast 🌤️</p>
+
+    <div class="search-box">
+      <img src="assets/search-icon.svg" class="search-icon" alt="search" />
+      <input type="text" id="cityInput" placeholder="Search city..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="message" class="message info"></div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader" aria-hidden="true"></div>
+
+    <!-- Current Weather Card -->
+    <div id="weatherCard" class="weather-card">
+      <div class="city-row">
+        <img src="assets/location-pin.svg" class="pin-icon" alt="" />
+        <span id="cityName" class="weather-city"></span>
+        <span id="country" class="weather-country"></span>
+      </div>
+
+      <div class="weather-main">
+        <div class="weather-temp" id="temperature"></div>
+        <img id="weatherIcon" class="weather-icon" alt="weather icon" />
+      </div>
+
+      <div class="weather-desc" id="description"></div>
+
+      <div class="weather-extra">
+        <div class="extra-item">
+          <img src="assets/humidity.svg" class="extra-img" alt="" />
+          <div>Humidity</div>
+          <strong id="humidity"></strong>
+        </div>
+        <div class="extra-item">
+          <img src="assets/wind.svg" class="extra-img" alt="" />
+          <div>Wind</div>
+          <strong id="wind"></strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Day Forecast -->
+    <div id="forecastSection" class="forecast-section">
+      <h2>5-Day Forecast</h2>
+      <div id="forecastList" class="forecast-list">
+        <!-- JS will inject forecast cards here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
